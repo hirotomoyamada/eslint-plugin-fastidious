@@ -84,6 +84,9 @@ When performing one of the actions below, read the linked rule first.
   - [Issue Rules](.agents/rules/issue.md)
 - Creating PRs:
   - [PR Rules](.agents/rules/pr.md)
+- Reviewing PRs:
+  - [PR Merge Guidelines](.agents/references/pr-merge-guidelines.md)
+  - [PR Review Guidelines](.agents/references/pr-review-guidelines.md)
 
 When editing or reviewing files that match a pattern below, read the linked rule first.
 
@@ -95,6 +98,9 @@ When editing or reviewing files that match a pattern below, read the linked rule
   - `.changeset/*.md`
   - `package.json`
   - `README.md`
+- [Source](.agents/rules/source.md):
+  - `src/**/*.ts`
+  - `!src/**/*.test.ts`
 
 ## Development Commands
 
