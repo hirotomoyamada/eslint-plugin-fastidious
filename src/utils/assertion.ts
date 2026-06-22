@@ -40,7 +40,9 @@ export function isArray<T extends any[]>(value: any): value is T {
 }
 
 export function isEmpty(value: any): boolean {
-  return !isArray(value) || !value.length || value.every((v) => v == null)
+  return (
+    !isArray(value) || !value.length || value.every((value) => value == null)
+  )
 }
 
 export function isEmptyObject(value: any): boolean {
