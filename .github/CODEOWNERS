@@ -1,6 +1,8 @@
-* @magi-ai/melchior @magi-ai/balthasar @magi-ai/caspar
+* @hirotomoyamada @melchior-magi @balthasar-magi @caspar-magi
 
 package.json @hirotomoyamada
 LICENSE @hirotomoyamada
+SECURITY.md @hirotomoyamada
+CODE_OF_CONDUCT.md @hirotomoyamada
 .github/ @hirotomoyamada
 .gitignore @hirotomoyamada
