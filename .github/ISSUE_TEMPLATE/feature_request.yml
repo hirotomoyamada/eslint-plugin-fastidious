@@ -1,0 +1,83 @@
+name: "Feature Request"
+description: "Request for features or enhancements."
+labels: ["triage"]
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for creating a feature request.
+
+        Please search open/closed feature requests before submitting. Someone might have asked for the same rule or config before.
+
+          - [Issues](https://github.com/hirotomoyamada/eslint-plugin-fastidious/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+          - [Closed Issues](https://github.com/hirotomoyamada/eslint-plugin-fastidious/issues?q=is%3Aissue+sort%3Aupdated-desc+is%3Aclosed)
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: "Feature type"
+      description: "Select the type of feature you are requesting."
+      options:
+        - "New lint rule"
+        - "Change to an existing rule"
+        - "Recommended config change"
+        - "Documentation"
+        - "Other"
+    validations:
+      required: true
+  - type: textarea
+    id: "description"
+    attributes:
+      label: "Description"
+      description: "Please describe your feature request in one or two sentences."
+    validations:
+      required: true
+  - type: textarea
+    id: "justification"
+    attributes:
+      label: "Problem Statement/Justification"
+      description: |
+        Provide valid reasons why this feature should be added to eslint-plugin-fastidious.
+
+        If this feature is related to a problem you've encountered, please describe it as well.
+    validations:
+      required: true
+  - type: textarea
+    id: "proposed-solution"
+    attributes:
+      label: "Proposed Solution or API"
+      description: |
+        Provide rule behavior, config snippets, diagnostic messages, autofix examples, or links to the ideal design.
+      placeholder: |
+        Rule name: fastidious/...
+
+        Ideal behavior I would like to see:
+        1. Report code like '...'
+        2. Allow code like '...'
+        3. Autofix to '...' if safe
+  - type: textarea
+    id: "alternatives"
+    attributes:
+      label: "Alternatives"
+      description: |
+        Have you considered any alternative solutions or features before making this request?
+  - type: dropdown
+    id: participate
+    attributes:
+      label: Are you willing to participate in implementing this feature and create a pull request with the implementation?
+      options:
+        - "Yes"
+        - "No"
+  - type: checkboxes
+    id: ai-used
+    attributes:
+      label: "AI used"
+      options:
+        - label: "I did not use AI to create this issue."
+        - label: "(If there is no check above) I checked the generated content before submitting."
+  - type: textarea
+    id: "additional-information"
+    attributes:
+      label: "Additional Information"
+      description: |
+        Do you have examples from other ESLint plugins, links, screenshots, or notes that could help with this feature?
