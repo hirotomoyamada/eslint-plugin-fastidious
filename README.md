@@ -13,6 +13,7 @@ export default [
       fastidious,
     },
     rules: {
+      "fastidious/blank-line-after-directive": "error",
       "fastidious/blank-line-before-return": "error",
       "fastidious/no-single-letter-variable": "error",
     },
@@ -30,7 +31,8 @@ export default [fastidious.configs.recommended]
 
 ## Rules
 
-| Name                                                                  | Recommended | Description                                    |
-| :-------------------------------------------------------------------- | ----------- | :--------------------------------------------- |
-| [`blank-line-before-return`](src/rules/blank-line-before-return.md)   | ✅          | Require a blank line before return statements. |
-| [`no-single-letter-variable`](src/rules/no-single-letter-variable.md) | ✅          | Disallow single-letter variable names.         |
+| Name                                                                    | Recommended | Description                                    |
+| :---------------------------------------------------------------------- | ----------- | :--------------------------------------------- |
+| [`blank-line-after-directive`](src/rules/blank-line-after-directive.md) | ✅          | Require a blank line after directives.         |
+| [`blank-line-before-return`](src/rules/blank-line-before-return.md)     | ✅          | Require a blank line before return statements. |
+| [`no-single-letter-variable`](src/rules/no-single-letter-variable.md)   | ✅          | Disallow single-letter variable names.         |
