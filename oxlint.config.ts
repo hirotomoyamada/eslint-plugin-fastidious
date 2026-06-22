@@ -20,10 +20,6 @@ export default defineConfig({
       name: "import-alias",
       specifier: "@limegrass/eslint-plugin-import-alias",
     },
-    {
-      name: "fastidious",
-      specifier: "./dist/index.js",
-    },
   ],
   options: { typeAware: true },
   plugins: ["eslint", "typescript", "unicorn", "import", "vitest"],
@@ -85,8 +81,6 @@ export default defineConfig({
       "error",
       { relativeImportOverrides: [{ depth: 0, path: "." }] },
     ],
-
-    "fastidious/no-single-letter-variable": "error",
 
     "perfectionist/sort-array-includes": ["warn", { type: "natural" }],
     "perfectionist/sort-exports": [
