@@ -1,0 +1,62 @@
+{
+  "name": "eslint-plugin-fastidious",
+  "version": "0.1.0",
+  "description": "ESLint plugin for checking for fastidious code.",
+  "license": "MIT",
+  "author": "Hirotomo Yamada <hirotomo.yamada@avap.co.jp>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hirotomoyamada/eslint-plugin-fastidious"
+  },
+  "bugs": {
+    "url": "https://github.com/hirotomoyamada/eslint-plugin-fastidious/issues"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=24.14"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "postbuild": "node scripts/copy-data.ts",
+    "build": "tsgo -p tsconfig.build.json",
+    "clean": "rimraf node_modules dist coverage",
+    "format:check": "oxfmt --check .",
+    "format:write": "oxfmt --write .",
+    "lint:check": "oxlint . --max-warnings=0",
+    "lint:fix": "oxlint . --max-warnings=0 --fix",
+    "prepare": "git rev-parse --is-inside-work-tree >/dev/null 2>&1 && lefthook install || true",
+    "quality": "pnpm format:check && pnpm lint:check && pnpm typecheck && pnpm test",
+    "test": "vitest run",
+    "test:dev": "vitest --watch --ui",
+    "typecheck": "tsgo --noEmit",
+    "release": "changeset publish",
+    "release:dev": "changeset version --snapshot dev && changeset publish --tag dev"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.7.0",
+    "@changesets/cli": "^2.30.0",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@limegrass/eslint-plugin-import-alias": "^1.6.1",
+    "@types/node": "^25.9.1",
+    "@typescript/native-preview": "7.0.0-dev.20260525.1",
+    "@vitest/coverage-v8": "^4.1.7",
+    "@vitest/ui": "^4.1.7",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "lefthook": "^2.1.8",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
+    "oxlint-tsgolint": "^0.23.0",
+    "rimraf": "^6.1.3",
+    "vitest": "^4.1.7"
+  },
+  "dependencies": {
+    "eslint": "^10.5.0"
+  }
+}
